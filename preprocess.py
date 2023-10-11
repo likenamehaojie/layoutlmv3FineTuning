@@ -72,12 +72,12 @@ if __name__ == '__main__':
         print(os.listdir('data'))
         for f in os.listdir('data'):
             if f.endswith('.txt') and f.find('box') != -1:
-                files['train_box'] = read_text_file(os.path.join(os.curdir, f))
+                files['train_box'] = read_text_file(os.path.join(os.curdir, 'data',f))
             elif f.endswith('.txt') and f.find('image') != -1:
                 files['train_image'] = read_text_file(
-                    os.path.join(os.curdir, f))
+                    os.path.join(os.curdir,'data', f))
             elif f.endswith('.txt') and f.find('labels') == -1:
-                files['train'] = read_text_file(os.path.join(os.curdir, f))
+                files['train'] = read_text_file(os.path.join(os.curdir, 'data',f))
     print(files.keys())
     print(len(files['train']))
     assert(len(files['train']) == len(files['train_box']))
