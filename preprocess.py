@@ -60,7 +60,7 @@ if __name__ == '__main__':
     os.makedirs(args.output_path, exist_ok=True)
     files = {}
     zip_dir_name = get_zip_dir_name()
-    print('abcd:{zip_dir_name}')
+    print('abcd:zip_dir_name'+{zip_dir_name})
     if zip_dir_name:
         files['train_box'] = read_text_file(os.path.join(
             os.curdir, 'data', f'{zip_dir_name}\\{zip_dir_name}_box.txt'))
