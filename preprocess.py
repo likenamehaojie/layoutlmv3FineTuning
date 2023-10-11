@@ -76,7 +76,8 @@ if __name__ == '__main__':
                     os.path.join(os.curdir, f))
             elif f.endswith('.txt') and f.find('labels') == -1:
                 files['train'] = read_text_file(os.path.join(os.curdir, f))
-
+    print(files.keys())
+    print(len(files['train']))
     assert(len(files['train']) == len(files['train_box']))
     assert(len(files['train_box']) == len(files['train_image']))
     assert(len(files['train_image']) == len(files['train']))
