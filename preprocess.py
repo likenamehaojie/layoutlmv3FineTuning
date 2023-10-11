@@ -69,7 +69,7 @@ if __name__ == '__main__':
         files['train'] = read_text_file(os.path.join(
             os.curdir, 'data', f'{zip_dir_name}\\{zip_dir_name}.txt'))
     else:
-        print(os.listdir())
+        print(os.listdir('data'))
         for f in os.listdir():
             if f.endswith('.txt') and f.find('box') != -1:
                 files['train_box'] = read_text_file(os.path.join(os.curdir, f))
